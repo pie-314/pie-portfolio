@@ -1,0 +1,12 @@
+[package]
+name = "TUI"
+version = "0.1.0"
+edition = "2024"
+
+[dependencies]
+color-eyre = "0.6.5"
+crossterm = "0.29.0"
+ratatui = "0.30.0"
+termion = "4.0.6"
+url = "2.5.8"
+xdg = "3.0.0"
