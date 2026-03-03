@@ -1,302 +1,412 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Aadarsh Chandra | Developer & Builder</title>
-    <meta name="description"
-        content="Aadarsh Chandra - Full-stack web, Python/Rust backend, and core systems developer. Self-employed since 18.">
+    <meta
+      name="description"
+      content="Aadarsh Chandra - Full-stack web, Python/Rust backend, and core systems developer. Self-employed since 18."
+    />
 
     <!-- Fonts: Clean Sans-Serif like Inter -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
-        href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500&display=swap"
-        rel="stylesheet">
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500&display=swap"
+      rel="stylesheet"
+    />
 
     <!-- Material / Remix Icons for clean vectors -->
-    <link href="https://cdn.jsdelivr.net/npm/remixicon@3.5.0/fonts/remixicon.css" rel="stylesheet">
+    <link
+      href="https://cdn.jsdelivr.net/npm/remixicon@3.5.0/fonts/remixicon.css"
+      rel="stylesheet"
+    />
 
     <!-- Devicon for authentic Tech Stack logos -->
-    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/devicon.min.css" />
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/devicon.min.css"
+    />
 
-    <link rel="stylesheet" href="styles.css">
-</head>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
 
-<body class="pro-theme">
-
+  <body class="pro-theme">
     <!-- TOP NAVIGATION -->
     <nav class="top-nav fade-in-up" style="--delay: 0.1s">
-        <div class="nav-container">
-            <div class="logo">AC<span>.</span></div>
-            <div class="nav-links hidden-mobile">
-                <a href="#experience">Experience</a>
-                <a href="#projects">Projects</a>
-                <a href="#writing">Blogs</a>
-            </div>
-            <div class="nav-actions">
-                <div class="search-box">
-                    <span class="muted">Search...</span> <kbd class="cmd-key">⌘ K</kbd>
-                </div>
-                <!-- Theme Toggle Button -->
-                <button id="themeToggleBtn" class="icon-btn theme-toggle tooltip tooltip-bottom"
-                    data-tooltip="Toggle Mode" aria-label="Toggle Dark Mode">
-                    <i class="ri-moon-line" id="themeIcon"></i>
-                </button>
-            </div>
+      <div class="nav-container">
+        <div class="logo">AC<span>.</span></div>
+        <div class="nav-links hidden-mobile">
+          <a href="#experience">Experience</a>
+          <a href="#projects">Projects</a>
+          <a href="#writing">Blogs</a>
         </div>
+        <div class="nav-actions">
+          <div class="search-box">
+            <span class="muted">Search...</span> <kbd class="cmd-key">⌘ K</kbd>
+          </div>
+          <!-- Theme Toggle Button -->
+          <button
+            id="themeToggleBtn"
+            class="icon-btn theme-toggle tooltip tooltip-bottom"
+            data-tooltip="Toggle Mode"
+            aria-label="Toggle Dark Mode"
+          >
+            <i class="ri-moon-line" id="themeIcon"></i>
+          </button>
+        </div>
+      </div>
     </nav>
 
     <main class="page-wrapper">
+      <!-- HERO SECTION -->
+      <section class="hero-section fade-in-up" style="--delay: 0.2s">
+        <div class="avatar-container">
+          <div class="avatar-placeholder">
+            <!-- Placeholder avatar matching the modern look -->
+            <img src="pi.jpg" alt="Aadarsh Profile" />
+          </div>
+        </div>
 
-        <!-- HERO SECTION -->
-        <section class="hero-section fade-in-up" style="--delay: 0.2s">
-            <div class="avatar-container">
-                <div class="avatar-placeholder">
-                    <!-- Placeholder avatar matching the modern look -->
-                    <img src="https://api.dicebear.com/7.x/notionists/svg?seed=Aadarsh&backgroundColor=e2e8f0"
-                        alt="Aadarsh Profile" />
-                </div>
+        <div class="hero-content">
+          <h1 class="hero-title">
+            Aadarsh Chandra
+            <i class="ri-checkbox-circle-fill verified-icon"></i>
+          </h1>
+          <h2 class="hero-subtitle">Software Developer / Builder</h2>
+
+          <p class="hero-bio">
+            Hey! I'm an 18-year-old self-employed developer. While I love diving
+            deep into low-level systems (C, Rust, Kernel), I'm primarily a
+            passionate learner who builds full-stack web applications, robust
+            Python/Rust backends, and practical tools. I build things from first
+            principles and ship them fast.
+          </p>
+
+          <div class="social-links">
+            <div class="social-pills">
+              <a
+                href="https://github.com/pie-314"
+                target="_blank"
+                class="social-pill"
+              >
+                <i class="ri-github-fill"></i> GitHub
+              </a>
+              <a
+                href="https://www.linkedin.com/in/aadarsh-chandra-70a06429b/"
+                target="_blank"
+                class="social-pill"
+              >
+                <i class="ri-linkedin-fill"></i> LinkedIn
+              </a>
+              <a
+                href="https://x.com/pie314n"
+                target="_blank"
+                class="social-pill"
+              >
+                <i class="ri-twitter-x-line"></i> Twitter
+              </a>
+              <a href="#" class="social-pill">
+                <i class="ri-file-text-line"></i> Resume
+              </a>
             </div>
+          </div>
 
-            <div class="hero-content">
-                <h1 class="hero-title">
-                    Aadarsh Chandra <i class="ri-checkbox-circle-fill verified-icon"></i>
-                </h1>
-                <h2 class="hero-subtitle">Software Developer / Builder</h2>
-
-                <p class="hero-bio">
-                    Hey! I'm an 18-year-old self-employed developer. While I love diving deep into low-level systems (C,
-                    Rust, Kernel), I'm primarily a passionate learner who builds full-stack web applications, robust
-                    Python/Rust backends, and practical tools. I build things from first principles and ship them fast.
-                </p>
-
-                <div class="social-links">
-                    <div class="social-pills">
-                        <a href="https://github.com/pie-314" target="_blank" class="social-pill">
-                            <i class="ri-github-fill"></i> GitHub
-                        </a>
-                        <a href="https://www.linkedin.com/in/aadarsh-chandra-70a06429b/" target="_blank"
-                            class="social-pill">
-                            <i class="ri-linkedin-fill"></i> LinkedIn
-                        </a>
-                        <a href="https://x.com/pie314n" target="_blank" class="social-pill">
-                            <i class="ri-twitter-x-line"></i> Twitter
-                        </a>
-                        <a href="#" class="social-pill">
-                            <i class="ri-file-text-line"></i> Resume
-                        </a>
-                    </div>
-                </div>
-
-                <div class="tech-stack">
-                    <span class="stack-label">TECH EXPOSURE</span>
-                    <div class="stack-icons">
-                        <i class="devicon-python-plain colored stack-logo tooltip" data-tooltip="Python"></i>
-                        <i class="devicon-rust-original stack-logo tooltip" data-tooltip="Rust"></i>
-                        <i class="devicon-c-plain colored stack-logo tooltip" data-tooltip="C"></i>
-                        <i class="devicon-java-plain colored stack-logo tooltip" data-tooltip="Java"></i>
-                        <i class="devicon-javascript-plain colored stack-logo tooltip" data-tooltip="JavaScript"></i>
-                        <i class="devicon-docker-plain colored stack-logo tooltip" data-tooltip="Docker"></i>
-                        <i class="devicon-postgresql-plain colored stack-logo tooltip" data-tooltip="PostgreSQL"></i>
-                        <i class="devicon-linux-plain stack-logo tooltip" data-tooltip="Linux"></i>
-                        <i class="devicon-git-plain colored stack-logo tooltip" data-tooltip="Git"></i>
-                    </div>
-                </div>
+          <div class="tech-stack">
+            <span class="stack-label">TECH EXPOSURE</span>
+            <div class="stack-icons">
+              <i
+                class="devicon-python-plain colored stack-logo tooltip"
+                data-tooltip="Python"
+              ></i>
+              <i
+                class="devicon-rust-original stack-logo tooltip"
+                data-tooltip="Rust"
+              ></i>
+              <i
+                class="devicon-c-plain colored stack-logo tooltip"
+                data-tooltip="C"
+              ></i>
+              <i
+                class="devicon-java-plain colored stack-logo tooltip"
+                data-tooltip="Java"
+              ></i>
+              <i
+                class="devicon-javascript-plain colored stack-logo tooltip"
+                data-tooltip="JavaScript"
+              ></i>
+              <i
+                class="devicon-docker-plain colored stack-logo tooltip"
+                data-tooltip="Docker"
+              ></i>
+              <i
+                class="devicon-postgresql-plain colored stack-logo tooltip"
+                data-tooltip="PostgreSQL"
+              ></i>
+              <i
+                class="devicon-linux-plain stack-logo tooltip"
+                data-tooltip="Linux"
+              ></i>
+              <i
+                class="devicon-git-plain colored stack-logo tooltip"
+                data-tooltip="Git"
+              ></i>
             </div>
-        </section>
+          </div>
+        </div>
+      </section>
 
+      <!-- EXPERIENCE SECTION -->
+      <section id="experience" class="section fade-in-up" style="--delay: 0.3s">
+        <h2 class="section-heading">Experience</h2>
 
-        <!-- EXPERIENCE SECTION -->
-        <section id="experience" class="section fade-in-up" style="--delay: 0.3s">
-            <h2 class="section-heading">Experience</h2>
-
-            <div class="experience-list">
-
-                <!-- Independent Developer Role -->
-                <div class="experience-item">
-                    <div class="exp-header" onclick="this.parentElement.classList.toggle('collapsed')">
-                        <div class="exp-company-logo logo-dark"><i class="ri-braces-fill"></i></div>
-                        <div class="exp-title-block">
-                            <h3 class="exp-role">Independent Developer <span class="exp-badge">Self-Employed</span></h3>
-                            <p class="exp-company">Freelance & Open Source</p>
-                        </div>
-                        <div class="exp-meta">
-                            <span class="exp-date">Present</span>
-                            <span class="exp-location">Remote</span>
-                            <i class="ri-arrow-up-s-line chevron"></i>
-                        </div>
-                    </div>
-                    <div class="exp-body">
-                        <ul>
-                            <li>Working as a self-employed developer, building end-to-end applications.</li>
-                            <li>Developing full-stack web applications and robust Python APIs for process automation and
-                                data handling.</li>
-                            <li>Building high-performance backend systems and CLIs in Rust to handle complex
-                                asynchronous workflows.</li>
-                            <li>Continuously exploring low-level systems (C, Kernel development) to build strong
-                                foundational knowledge.</li>
-                        </ul>
-                        <div class="exp-skills">
-                            <span class="mini-tag">Python Backend</span>
-                            <span class="mini-tag">Web Development</span>
-                            <span class="mini-tag">Rust</span>
-                            <span class="mini-tag">Open Source</span>
-                        </div>
-                    </div>
-                </div>
+        <div class="experience-list">
+          <!-- Independent Developer Role -->
+          <div class="experience-item">
+            <div
+              class="exp-header"
+              onclick="this.parentElement.classList.toggle('collapsed')"
+            >
+              <div class="exp-company-logo logo-dark">
+                <i class="ri-braces-fill"></i>
+              </div>
+              <div class="exp-title-block">
+                <h3 class="exp-role">
+                  Independent Developer
+                  <span class="exp-badge">Self-Employed</span>
+                </h3>
+                <p class="exp-company">Freelance & Open Source</p>
+              </div>
+              <div class="exp-meta">
+                <span class="exp-date">Present</span>
+                <span class="exp-location">Remote</span>
+                <i class="ri-arrow-up-s-line chevron"></i>
+              </div>
             </div>
-        </section>
-
-        <!-- SECTION DIVIDER -->
-        <div class="section-divider"></div>
-
-        <!-- PROJECTS SECTION -->
-        <section id="projects" class="section fade-in-up" style="--delay: 0.4s">
-            <h2 class="section-heading">Projects</h2>
-
-            <div class="projects-grid">
-
-                <!-- Rustorian -->
-                <article class="project-card">
-                    <div class="project-visual bg-gradient-orange">
-                        <div class="project-mockup">
-                            <i class="devicon-rust-original mockup-icon"></i>
-                            <span class="mockup-text text-mono">Backend</span>
-                        </div>
-                    </div>
-                    <div class="project-info">
-                        <div class="project-status">
-                            <span class="status-dot dot-live tooltip" data-tooltip="Stable"></span> Rustorian
-                        </div>
-                        <p class="project-description">
-                            A Rust-based Async Historian with monthly SQLite rotation. Designed for robust backend data
-                            management and high performance.
-                        </p>
-                        <a href="https://github.com/pie-314/Rustorian" target="_blank" class="project-link">
-                            View Project <i class="ri-arrow-right-up-line"></i>
-                        </a>
-                    </div>
-                </article>
-
-                <!-- Neural Net -->
-                <article class="project-card">
-                    <div class="project-visual bg-gradient-purple">
-                        <div class="project-mockup">
-                            <i class="devicon-c-plain mockup-icon"></i>
-                            <span class="mockup-text text-mono">ML Core</span>
-                        </div>
-                    </div>
-                    <div class="project-info">
-                        <div class="project-status">
-                            <span class="status-dot dot-dev tooltip" data-tooltip="In Active Development"></span> Neural
-                            Net from Scratch (C)
-                        </div>
-                        <p class="project-description">
-                            Implementations of forward and backpropagation logic entirely from scratch in raw C,
-                            disregarding external machine learning frameworks.
-                        </p>
-                        <a href="https://github.com/pie-314/neural-network-from-scratch-c" target="_blank"
-                            class="project-link">
-                            View Project <i class="ri-arrow-right-up-line"></i>
-                        </a>
-                    </div>
-                </article>
-
-                <!-- RadishDB -->
-                <article class="project-card">
-                    <div class="project-visual bg-gradient-gray">
-                        <div class="project-mockup">
-                            <i class="ri-database-2-line mockup-icon"></i>
-                            <span class="mockup-text text-mono">0x4A1</span>
-                        </div>
-                    </div>
-                    <div class="project-info">
-                        <div class="project-status">
-                            <span class="status-dot dot-live tooltip" data-tooltip="Stable Version Released"></span>
-                            RadishDB
-                        </div>
-                        <p class="project-description">
-                            A highly-optimized, crash-safe storage engine built from scratch in C. Implements WAL and
-                            POSIX mmap APIs.
-                        </p>
-                        <a href="https://github.com/pie-314/radishdb" target="_blank" class="project-link">
-                            View Project <i class="ri-arrow-right-up-line"></i>
-                        </a>
-                    </div>
-                </article>
-
-                <!-- TRX -->
-                <article class="project-card">
-                    <div class="project-visual bg-gradient-blue">
-                        <div class="project-mockup">
-                            <i class="devicon-rust-original mockup-icon"></i>
-                            <span class="mockup-text text-mono">0x7B2</span>
-                        </div>
-                    </div>
-                    <div class="project-info">
-                        <div class="project-status">
-                            <span class="status-dot dot-live tooltip" data-tooltip="TUI Active"></span> TRX Package
-                            Manager
-                        </div>
-                        <p class="project-description">
-                            A blazing fast, terminal-native package manager utilizing Ratatui to deliver a beautiful,
-                            modern workflow CLI.
-                        </p>
-                        <a href="https://github.com/pie-314/trx" target="_blank" class="project-link">
-                            View Project <i class="ri-arrow-right-up-line"></i>
-                        </a>
-                    </div>
-                </article>
-
+            <div class="exp-body">
+              <ul>
+                <li>
+                  Working as a self-employed developer, building end-to-end
+                  applications.
+                </li>
+                <li>
+                  Developing full-stack web applications and robust Python APIs
+                  for process automation and data handling.
+                </li>
+                <li>
+                  Building high-performance backend systems and CLIs in Rust to
+                  handle complex asynchronous workflows.
+                </li>
+                <li>
+                  Continuously exploring low-level systems (C, Kernel
+                  development) to build strong foundational knowledge.
+                </li>
+              </ul>
+              <div class="exp-skills">
+                <span class="mini-tag">Python Backend</span>
+                <span class="mini-tag">Web Development</span>
+                <span class="mini-tag">Rust</span>
+                <span class="mini-tag">Open Source</span>
+              </div>
             </div>
-        </section>
+          </div>
+        </div>
+      </section>
 
-        <div class="section-divider"></div>
+      <!-- SECTION DIVIDER -->
+      <div class="section-divider"></div>
 
-        <!-- GITHUB HEATMAP -->
-        <section class="heatmap-section fade-in-up" style="--delay: 0.45s">
-            <h2 class="section-label">GITHUB ACTIVITY</h2>
-            <div class="heatmap-container">
-                <img src="https://ghchart.rshah.org/475569/pie-314" alt="GitHub Heatmap representing pie-314's activity"
-                    class="github-heatmap">
+      <!-- PROJECTS SECTION -->
+      <section id="projects" class="section fade-in-up" style="--delay: 0.4s">
+        <h2 class="section-heading">Projects</h2>
+
+        <div class="projects-grid">
+          <!-- Rustorian -->
+          <article class="project-card">
+            <div class="project-visual bg-gradient-orange">
+              <div class="project-mockup">
+                <i class="devicon-rust-original mockup-icon"></i>
+                <span class="mockup-text text-mono">Backend</span>
+              </div>
             </div>
-        </section>
-
-        <!-- SECTION DIVIDER -->
-        <div class="section-divider"></div>
-
-        <!-- BLOGS SECTION -->
-        <section id="writing" class="section fade-in-up" style="--delay: 0.5s">
-            <h2 class="section-heading">Blogs <span class="muted">/ Writing</span></h2>
-
-            <div class="blogs-list">
-                <a href="https://pie.hashnode.dev/how-i-built-a-crash-safe-database-engine-in-c" target="_blank"
-                    class="blog-item">
-                    <div class="blog-meta">Mar 2024 • Tech Deep Dive</div>
-                    <h3 class="blog-title">How I built a Crash-Safe Database Engine in C</h3>
-                    <p class="blog-excerpt">A comprehensive look into Write-Ahead Logs, data persistence, and C
-                        architecture.</p>
-                </a>
-
-                <a href="https://physicsforkidss.blogspot.com/2024/10/general-relativity-for-kids-to.html"
-                    target="_blank" class="blog-item">
-                    <div class="blog-meta">Oct 2024 • Mental Models</div>
-                    <h3 class="blog-title">General Relativity for Kids</h3>
-                    <p class="blog-excerpt">Distilling complex physics concepts into accessible mental models for anyone
-                        to understand.</p>
-                </a>
+            <div class="project-info">
+              <div class="project-status">
+                <span
+                  class="status-dot dot-live tooltip"
+                  data-tooltip="Stable"
+                ></span>
+                Rustorian
+              </div>
+              <p class="project-description">
+                A Rust-based Async Historian with monthly SQLite rotation.
+                Designed for robust backend data management and high
+                performance.
+              </p>
+              <a
+                href="https://github.com/pie-314/Rustorian"
+                target="_blank"
+                class="project-link"
+              >
+                View Project <i class="ri-arrow-right-up-line"></i>
+              </a>
             </div>
-        </section>
+          </article>
 
-        <footer class="footer-bottom fade-in-up" style="--delay: 0.6s">
-            <p>&copy; 2026 Aadarsh Chandra. Designed from first principles.</p>
-        </footer>
+          <!-- Neural Net -->
+          <article class="project-card">
+            <div class="project-visual bg-gradient-purple">
+              <div class="project-mockup">
+                <i class="devicon-c-plain mockup-icon"></i>
+                <span class="mockup-text text-mono">ML Core</span>
+              </div>
+            </div>
+            <div class="project-info">
+              <div class="project-status">
+                <span
+                  class="status-dot dot-dev tooltip"
+                  data-tooltip="In Active Development"
+                ></span>
+                Neural Net from Scratch (C)
+              </div>
+              <p class="project-description">
+                Implementations of forward and backpropagation logic entirely
+                from scratch in raw C, disregarding external machine learning
+                frameworks.
+              </p>
+              <a
+                href="https://github.com/pie-314/neural-network-from-scratch-c"
+                target="_blank"
+                class="project-link"
+              >
+                View Project <i class="ri-arrow-right-up-line"></i>
+              </a>
+            </div>
+          </article>
 
+          <!-- RadishDB -->
+          <article class="project-card">
+            <div class="project-visual bg-gradient-gray">
+              <div class="project-mockup">
+                <i class="ri-database-2-line mockup-icon"></i>
+                <span class="mockup-text text-mono">0x4A1</span>
+              </div>
+            </div>
+            <div class="project-info">
+              <div class="project-status">
+                <span
+                  class="status-dot dot-live tooltip"
+                  data-tooltip="Stable Version Released"
+                ></span>
+                RadishDB
+              </div>
+              <p class="project-description">
+                A highly-optimized, crash-safe storage engine built from scratch
+                in C. Implements WAL and POSIX mmap APIs.
+              </p>
+              <a
+                href="https://github.com/pie-314/radishdb"
+                target="_blank"
+                class="project-link"
+              >
+                View Project <i class="ri-arrow-right-up-line"></i>
+              </a>
+            </div>
+          </article>
+
+          <!-- TRX -->
+          <article class="project-card">
+            <div class="project-visual bg-gradient-blue">
+              <div class="project-mockup">
+                <i class="devicon-rust-original mockup-icon"></i>
+                <span class="mockup-text text-mono">0x7B2</span>
+              </div>
+            </div>
+            <div class="project-info">
+              <div class="project-status">
+                <span
+                  class="status-dot dot-live tooltip"
+                  data-tooltip="TUI Active"
+                ></span>
+                TRX Package Manager
+              </div>
+              <p class="project-description">
+                A blazing fast, terminal-native package manager utilizing
+                Ratatui to deliver a beautiful, modern workflow CLI.
+              </p>
+              <a
+                href="https://github.com/pie-314/trx"
+                target="_blank"
+                class="project-link"
+              >
+                View Project <i class="ri-arrow-right-up-line"></i>
+              </a>
+            </div>
+          </article>
+        </div>
+      </section>
+
+      <div class="section-divider"></div>
+
+      <!-- GITHUB HEATMAP -->
+      <section class="heatmap-section fade-in-up" style="--delay: 0.45s">
+        <h2 class="section-label">GITHUB ACTIVITY</h2>
+        <div class="heatmap-container">
+          <img
+            src="https://ghchart.rshah.org/475569/pie-314"
+            alt="GitHub Heatmap representing pie-314's activity"
+            class="github-heatmap"
+          />
+        </div>
+      </section>
+
+      <!-- SECTION DIVIDER -->
+      <div class="section-divider"></div>
+
+      <!-- BLOGS SECTION -->
+      <section id="writing" class="section fade-in-up" style="--delay: 0.5s">
+        <h2 class="section-heading">
+          Blogs <span class="muted">/ Writing</span>
+        </h2>
+
+        <div class="blogs-list">
+          <a
+            href="https://pie.hashnode.dev/how-i-built-a-crash-safe-database-engine-in-c"
+            target="_blank"
+            class="blog-item"
+          >
+            <div class="blog-meta">Mar 2024 • Tech Deep Dive</div>
+            <h3 class="blog-title">
+              How I built a Crash-Safe Database Engine in C
+            </h3>
+            <p class="blog-excerpt">
+              A comprehensive look into Write-Ahead Logs, data persistence, and
+              C architecture.
+            </p>
+          </a>
+
+          <a
+            href="https://physicsforkidss.blogspot.com/2024/10/general-relativity-for-kids-to.html"
+            target="_blank"
+            class="blog-item"
+          >
+            <div class="blog-meta">Oct 2024 • Mental Models</div>
+            <h3 class="blog-title">General Relativity for Kids</h3>
+            <p class="blog-excerpt">
+              Distilling complex physics concepts into accessible mental models
+              for anyone to understand.
+            </p>
+          </a>
+        </div>
+      </section>
+
+      <footer class="footer-bottom fade-in-up" style="--delay: 0.6s">
+        <p>&copy; 2026 Aadarsh Chandra. Designed from first principles.</p>
+      </footer>
     </main>
 
     <script src="script.js"></script>
-</body>
-
+  </body>
 </html>
+
