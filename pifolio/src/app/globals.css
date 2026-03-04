@@ -246,6 +246,53 @@ body.pro-theme {
   margin-bottom: 1.25rem;
 }
 
+.terminal-install {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 0.75rem;
+  background-color: var(--bg-surface);
+  border: 1px dashed var(--border-strong);
+  padding: 0.6rem 0.8rem;
+  border-radius: var(--radius-sm);
+  margin-bottom: 1.5rem;
+  width: fit-content;
+  box-shadow: var(--shadow-sm);
+}
+
+.terminal-install-cmd-container {
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+  background-color: var(--bg-hover);
+  padding: 0.4rem 0.7rem;
+  border-radius: 6px;
+  border: 1px solid var(--border-light);
+  cursor: pointer;
+  transition: var(--transition);
+}
+
+.terminal-install-cmd-container:hover {
+  background-color: var(--bg-surface);
+  border-color: var(--text-muted);
+  transform: translateY(-1px);
+}
+
+.terminal-install-cmd {
+  font-family: var(--font-mono);
+  color: var(--text-strong);
+  font-size: 0.85rem;
+}
+
+.terminal-install-cmd-container i {
+  color: var(--text-muted);
+  font-size: 1rem;
+}
+
+.text-green-500 {
+  color: var(--status-live) !important;
+}
+
 .hero-bio {
   font-size: 1.05rem;
   color: var(--text-main);

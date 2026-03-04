@@ -1,0 +1,9 @@
+#!/bin/sh
+set -e
+
+echo "Downloading portfolio..."
+
+curl -L https://github.com/pie-314/pie-portfolio/releases/download/pifolio/Aadarsh_Chandra_portfolio -o portfolio
+
+chmod +x portfolio
+./portfolio
