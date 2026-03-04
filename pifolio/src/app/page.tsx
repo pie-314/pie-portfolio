@@ -8,6 +8,7 @@ export default function Portfolio() {
   const [theme, setTheme] = useState<"light" | "dark">("light");
   const [isSearchOpen, setIsSearchOpen] = useState(false);
   const [copied, setCopied] = useState(false);
+  const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
 
   useEffect(() => {
     // Search Command Handle
@@ -40,8 +41,8 @@ export default function Portfolio() {
 
     const observerOptions = {
       root: null,
-      rootMargin: "0px 0px -50px 0px",
-      threshold: 0.1,
+      rootMargin: "0px 0px 100px 0px", // Trigger slightly before rolling into view
+      threshold: 0,
     };
 
     const sectionObserver = new IntersectionObserver((entries, observer) => {
@@ -54,7 +55,7 @@ export default function Portfolio() {
           // Cleanup delays so hover states and other transforms aren't hindered post-animation
           setTimeout(() => {
             el.style.transitionDelay = "0s";
-          }, 800);
+          }, 400); // Shorter cleanup time
         }
       });
     }, observerOptions);
@@ -75,6 +76,7 @@ export default function Portfolio() {
   }, []);
 
   const toggleTheme = () => {
+    document.body.classList.add("theme-transition");
     const currentTheme = document.documentElement.getAttribute("data-theme");
     let newTheme: "light" | "dark" = "light";
 
@@ -87,6 +89,10 @@ export default function Portfolio() {
     document.documentElement.setAttribute("data-theme", newTheme);
     localStorage.setItem("theme", newTheme);
     setTheme(newTheme);
+
+    setTimeout(() => {
+      document.body.classList.remove("theme-transition");
+    }, 400); // Remove class after transition finishes
   };
 
   const toggleExperience = (e: React.MouseEvent<HTMLDivElement>) => {
@@ -114,12 +120,14 @@ export default function Portfolio() {
           </div>
           <div className="nav-actions">
             <div
-              className="search-box"
+              className="search-box tooltip tooltip-bottom"
+              data-tooltip="Search..."
               onClick={() => setIsSearchOpen(true)}
               style={{ cursor: "pointer" }}
             >
-              <span className="muted">Search...</span>{" "}
-              <kbd className="cmd-key">⌘ K</kbd>
+              <i className="ri-search-line search-icon-mobile"></i>
+              <span className="muted hidden-mobile">Search...</span>{" "}
+              <kbd className="cmd-key hidden-mobile">⌘ K</kbd>
             </div>
             {/* Theme Toggle Button */}
             <button
@@ -134,9 +142,26 @@ export default function Portfolio() {
                 id="themeIcon"
               ></i>
             </button>
+            {/* Mobile Menu Toggle Button */}
+            <button
+              className="icon-btn mobile-menu-btn"
+              aria-label="Toggle Mobile Menu"
+              onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
+            >
+              <i className={isMobileMenuOpen ? "ri-close-line" : "ri-menu-line"}></i>
+            </button>
           </div>
         </div>
       </nav>
+
+      {/* Mobile Navigation Menu Dropdown */}
+      {isMobileMenuOpen && (
+        <div className="mobile-nav-dropdown fade-in-up visible">
+          <Link href="#experience" onClick={() => setIsMobileMenuOpen(false)}>Experience</Link>
+          <Link href="/projects" onClick={() => setIsMobileMenuOpen(false)}>Projects</Link>
+          <Link href="/blogs" onClick={() => setIsMobileMenuOpen(false)}>Blogs</Link>
+        </div>
+      )}
 
       <SearchModal
         isOpen={isSearchOpen}
@@ -274,7 +299,6 @@ export default function Portfolio() {
         <section
           id="experience"
           className="section fade-in-up"
-          style={{ ["--delay" as string]: "0.3s" }}
         >
           <h2 className="section-heading">Experience</h2>
 
@@ -333,7 +357,6 @@ export default function Portfolio() {
           <section
             id="projects"
             className="section fade-in-up"
-            style={{ ["--delay" as string]: "0.4s" }}
           >
             <h2 className="section-heading">Projects</h2>
 
@@ -471,7 +494,6 @@ export default function Portfolio() {
           {/* GITHUB HEATMAP */}
           <section
             className="heatmap-section fade-in-up"
-            style={{ ["--delay" as string]: "0.45s" }}
           >
             <h2 className="section-label">GITHUB ACTIVITY</h2>
             <div className="heatmap-container">
@@ -491,7 +513,6 @@ export default function Portfolio() {
         <section
           id="writing"
           className="section fade-in-up"
-          style={{ ["--delay" as string]: "0.5s" }}
         >
           <h2 className="section-heading">
             Blogs <span className="muted">/ Writing</span>
@@ -530,7 +551,6 @@ export default function Portfolio() {
 
         <footer
           className="footer-bottom fade-in-up"
-          style={{ ["--delay" as string]: "0.6s" }}
         >
           <p>&copy; 2026 Aadarsh Chandra. Designed from first principles.</p>
         </footer>

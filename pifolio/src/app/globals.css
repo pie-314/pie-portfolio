@@ -37,7 +37,8 @@
   --radius-lg: 16px;
   --radius-pill: 99px;
 
-  --transition: all 0.2s cubic-bezier(0.4, 0, 0.2, 1);
+  /* Global general hover transitions set to be snappier - 0.15s instead of 0.2s */
+  --transition: all 0.15s cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 /* --- DARK THEME OVERRIDES --- */
@@ -75,7 +76,13 @@ body.pro-theme {
   font-family: var(--font-ui);
   line-height: 1.6;
   -webkit-font-smoothing: antialiased;
-  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+/* --- SMOOTH DARK/LIGHT MODE TOGGLE GLOBAL CLASS --- */
+.theme-transition,
+.theme-transition * {
+  /* Animate these exact properties when theme switches across the DOM */
+  transition: background-color 0.4s ease, border-color 0.4s ease, color 0.4s ease, box-shadow 0.4s ease !important;
 }
 
 /* --- TYPOGRAPHY UTILS --- */
@@ -182,6 +189,15 @@ body.pro-theme {
 .icon-btn:hover {
   color: var(--text-strong);
   background-color: var(--bg-hover);
+}
+
+.mobile-menu-btn {
+  display: none;
+  /* hidden on desktop */
+}
+
+.search-icon-mobile {
+  display: none;
 }
 
 /* --- MAIN WRAPPER (Single Column Focus) --- */
@@ -785,8 +801,10 @@ body.pro-theme {
 /* --- ANIMATIONS --- */
 .fade-in-up {
   opacity: 0;
-  transform: translateY(15px);
-  transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+  transform: translateY(10px);
+  /* Less distance to travel */
+  transition: opacity 0.4s ease-out, transform 0.4s ease-out;
+  /* Faster fade! */
   transition-delay: var(--delay, 0s);
 }
 
@@ -797,23 +815,87 @@ body.pro-theme {
 
 
 /* --- RESPONSIVE --- */
-@media (max-width: 600px) {
+@media (max-width: 1024px) {
+  .page-wrapper {
+    padding: 3rem 1.5rem 6rem;
+  }
+}
+
+@media (max-width: 768px) {
   .hidden-mobile {
-    display: none;
+    display: none !important;
   }
 
+  .search-icon-mobile {
+    display: inline-block;
+    color: var(--text-muted);
+  }
+
+  .search-box {
+    padding: 0.4rem;
+    justify-content: center;
+  }
+
+  .mobile-menu-btn {
+    display: flex;
+    /* show hamburger on mobile/tablet */
+  }
+
+  /* Mobile Nav Dropdown */
+  .mobile-nav-dropdown {
+    position: fixed;
+    top: 65px;
+    /* height of header approx */
+    left: 0;
+    right: 0;
+    background-color: color-mix(in srgb, var(--bg-surface) 95%, transparent);
+    backdrop-filter: blur(16px);
+    border-bottom: 1px solid var(--border-light);
+    display: flex;
+    flex-direction: column;
+    padding: 1rem 1.5rem;
+    gap: 1rem;
+    z-index: 40;
+    box-shadow: var(--shadow-sm);
+  }
+
+  .mobile-nav-dropdown a {
+    color: var(--text-main);
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 1.1rem;
+    padding: 0.5rem 0;
+    border-bottom: 1px solid var(--border-light);
+  }
+
+  .mobile-nav-dropdown a:last-child {
+    border-bottom: none;
+  }
+
+  /* Adjust Hero Stacking early on Tablets */
   .hero-section {
     flex-direction: column;
+    align-items: center;
+    text-align: center;
     gap: 1.5rem;
   }
 
-  .avatar-placeholder {
-    width: 100px;
-    height: 100px;
+  .hero-title {
+    justify-content: center;
+    font-size: 2.2rem;
   }
 
-  .hero-title {
-    font-size: 2rem;
+  .terminal-install {
+    margin: 0 auto 1.5rem auto;
+    justify-content: center;
+  }
+
+  .social-pills {
+    justify-content: center;
+  }
+
+  .stack-icons {
+    justify-content: center;
   }
 
   .project-card {
@@ -822,7 +904,7 @@ body.pro-theme {
 
   .project-visual {
     width: 100%;
-    height: 150px;
+    height: 180px;
     border-right: none;
     border-bottom: 1px solid var(--border-light);
   }
@@ -831,17 +913,58 @@ body.pro-theme {
     width: 100%;
   }
 
+  /* Make sure search input takes up more width if open on small device */
+  .search-modal {
+    width: 90%;
+    margin: 0 auto;
+  }
+}
+
+@media (max-width: 480px) {
+  .page-wrapper {
+    padding: 2rem 1rem 4rem;
+  }
+
+  .hero-title {
+    font-size: 1.8rem;
+    flex-wrap: wrap;
+    /* in case name is too long */
+  }
+
+  .hero-subtitle {
+    font-size: 1.05rem;
+  }
+
+  .avatar-placeholder {
+    width: 100px;
+    height: 100px;
+  }
+
+  .section-heading {
+    font-size: 2rem;
+    margin-bottom: 1.5rem;
+  }
+
   .exp-header {
     flex-wrap: wrap;
+    padding: 1rem;
+  }
+
+  .exp-company-logo {
+    margin-right: 1rem;
+    width: 40px;
+    height: 40px;
+    font-size: 1.2rem;
   }
 
   .exp-meta {
     width: 100%;
     align-items: flex-start;
     padding-right: 0;
-    padding-left: 5.5rem;
+    padding-left: 3.5rem;
     margin-top: 0.5rem;
     flex-direction: row;
+    gap: 0.8rem;
   }
 
   .chevron {
@@ -849,7 +972,19 @@ body.pro-theme {
   }
 
   .exp-body {
-    padding-left: 1.5rem;
+    padding: 0 1rem 1rem 1rem;
+  }
+
+  .heatmap-container {
+    padding: 0.5rem;
+  }
+
+  .terminal-install {
+    padding: 0.5rem;
+  }
+
+  .terminal-install-cmd {
+    font-size: 0.75rem;
   }
 }
 
