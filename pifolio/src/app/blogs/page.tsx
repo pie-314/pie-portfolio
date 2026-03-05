@@ -116,6 +116,17 @@ export default function BlogsIndex() {
 
                     <div className="blogs-list">
                         <Link
+                            href="/blog/building-a-neural-network-from-scratch-in-c"
+                            className="blog-item"
+                        >
+                            <div className="blog-meta">Mar 2026 • Machine Learning</div>
+                            <h3 className="blog-title">Building a Neural Network from Scratch in C</h3>
+                            <p className="blog-excerpt">
+                                My journey with Fibonacci, AP, and GP: Understanding the tiny gears of AI.
+                            </p>
+                        </Link>
+
+                        <Link
                             href="/blog/how-i-built-a-crash-safe-database-engine-in-c"
                             className="blog-item"
                         >
