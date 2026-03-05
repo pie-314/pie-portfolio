@@ -148,7 +148,9 @@ export default function Portfolio() {
               aria-label="Toggle Mobile Menu"
               onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
             >
-              <i className={isMobileMenuOpen ? "ri-close-line" : "ri-menu-line"}></i>
+              <i
+                className={isMobileMenuOpen ? "ri-close-line" : "ri-menu-line"}
+              ></i>
             </button>
           </div>
         </div>
@@ -157,9 +159,15 @@ export default function Portfolio() {
       {/* Mobile Navigation Menu Dropdown */}
       {isMobileMenuOpen && (
         <div className="mobile-nav-dropdown fade-in-up visible">
-          <Link href="#experience" onClick={() => setIsMobileMenuOpen(false)}>Experience</Link>
-          <Link href="/projects" onClick={() => setIsMobileMenuOpen(false)}>Projects</Link>
-          <Link href="/blogs" onClick={() => setIsMobileMenuOpen(false)}>Blogs</Link>
+          <Link href="#experience" onClick={() => setIsMobileMenuOpen(false)}>
+            Experience
+          </Link>
+          <Link href="/projects" onClick={() => setIsMobileMenuOpen(false)}>
+            Projects
+          </Link>
+          <Link href="/blogs" onClick={() => setIsMobileMenuOpen(false)}>
+            Blogs
+          </Link>
         </div>
       )}
 
@@ -196,13 +204,23 @@ export default function Portfolio() {
                 className="terminal-install-cmd-container tooltip tooltip-bottom"
                 data-tooltip={copied ? "Copied!" : "Click to copy"}
                 onClick={() => {
-                  navigator.clipboard.writeText("curl -fsSL https://pidev.tech/install | sh");
+                  navigator.clipboard.writeText(
+                    "curl -fsSL https://pidev.tech/install | sh",
+                  );
                   setCopied(true);
                   setTimeout(() => setCopied(false), 2000);
                 }}
               >
-                <code className="terminal-install-cmd">curl -fsSL https://pidev.tech/install | sh</code>
-                <i className={copied ? "ri-check-line text-green-500" : "ri-file-copy-line"}></i>
+                <code className="terminal-install-cmd">
+                  curl -fsSL https://pidev.tech/install | sh
+                </code>
+                <i
+                  className={
+                    copied
+                      ? "ri-check-line text-green-500"
+                      : "ri-file-copy-line"
+                  }
+                ></i>
               </div>
             </div>
 
@@ -296,10 +314,7 @@ export default function Portfolio() {
         </section>
 
         {/* EXPERIENCE SECTION */}
-        <section
-          id="experience"
-          className="section fade-in-up"
-        >
+        <section id="experience" className="section fade-in-up">
           <h2 className="section-heading">Experience</h2>
 
           <div className="experience-list">
@@ -354,10 +369,7 @@ export default function Portfolio() {
           <div className="section-divider"></div>
 
           {/* PROJECTS SECTION */}
-          <section
-            id="projects"
-            className="section fade-in-up"
-          >
+          <section id="projects" className="section fade-in-up">
             <h2 className="section-heading">Projects</h2>
 
             <div className="projects-grid">
@@ -492,9 +504,7 @@ export default function Portfolio() {
           <div className="section-divider"></div>
 
           {/* GITHUB HEATMAP */}
-          <section
-            className="heatmap-section fade-in-up"
-          >
+          <section className="heatmap-section fade-in-up">
             <h2 className="section-label">GITHUB ACTIVITY</h2>
             <div className="heatmap-container">
               <img
@@ -510,10 +520,7 @@ export default function Portfolio() {
         <div className="section-divider"></div>
 
         {/* BLOGS SECTION */}
-        <section
-          id="writing"
-          className="section fade-in-up"
-        >
+        <section id="writing" className="section fade-in-up">
           <h2 className="section-heading">
             Blogs <span className="muted">/ Writing</span>
           </h2>
@@ -523,7 +530,7 @@ export default function Portfolio() {
               href="/blog/how-i-built-a-crash-safe-database-engine-in-c"
               className="blog-item"
             >
-              <div className="blog-meta">Mar 2024 • Tech Deep Dive</div>
+              <div className="blog-meta">Mar 2026 • Tech Deep Dive</div>
               <h3 className="blog-title">
                 How I built a Crash-Safe Database Engine in C
               </h3>
@@ -549,9 +556,7 @@ export default function Portfolio() {
           </div>
         </section>
 
-        <footer
-          className="footer-bottom fade-in-up"
-        >
+        <footer className="footer-bottom fade-in-up">
           <p>&copy; 2026 Aadarsh Chandra. Designed from first principles.</p>
         </footer>
       </main>
