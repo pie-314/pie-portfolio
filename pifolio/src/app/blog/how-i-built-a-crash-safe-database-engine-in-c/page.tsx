@@ -6,6 +6,7 @@ import "../../globals.css";
 
 export default function BlogPost() {
   const [theme, setTheme] = useState<"light" | "dark">("light");
+  const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
 
   const [activeId, setActiveId] = useState("");
   const [tocProgress, setTocProgress] = useState(0);
@@ -102,7 +103,7 @@ export default function BlogPost() {
     const observerOptions = {
       root: null,
       rootMargin: "0px 0px -50px 0px",
-      threshold: 0.1,
+      threshold: 0,
     };
     const sectionObserver = new IntersectionObserver((entries, observer) => {
       entries.forEach((entry) => {
@@ -120,7 +121,7 @@ export default function BlogPost() {
     fadeElements.forEach((el) => sectionObserver.observe(el));
     setTimeout(() => {
       const initialElements = document.querySelectorAll(
-        ".hero-section, .top-nav, .article-content",
+        ".hero-section, .top-nav, .blog-content-wrapper",
       );
       initialElements.forEach((el) => el.classList.add("visible"));
     }, 50);
@@ -166,9 +167,34 @@ export default function BlogPost() {
                 id="themeIcon"
               ></i>
             </button>
+            {/* Mobile Menu Toggle Button */}
+            <button
+              className="icon-btn mobile-menu-btn"
+              aria-label="Toggle Mobile Menu"
+              onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
+            >
+              <i
+                className={isMobileMenuOpen ? "ri-close-line" : "ri-menu-line"}
+              ></i>
+            </button>
           </div>
         </div>
       </nav>
+
+      {/* Mobile Navigation Menu Dropdown */}
+      {isMobileMenuOpen && (
+        <div className="mobile-nav-dropdown fade-in-up visible">
+          <Link href="/#experience" onClick={() => setIsMobileMenuOpen(false)}>
+            Experience
+          </Link>
+          <Link href="/projects" onClick={() => setIsMobileMenuOpen(false)}>
+            Projects
+          </Link>
+          <Link href="/blogs" onClick={() => setIsMobileMenuOpen(false)}>
+            Blogs
+          </Link>
+        </div>
+      )}
 
       <main className="page-wrapper" style={{ paddingTop: "2rem" }}>
         <div className="blog-container">

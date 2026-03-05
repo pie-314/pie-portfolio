@@ -6,6 +6,7 @@ import "../globals.css";
 
 export default function BlogsIndex() {
     const [theme, setTheme] = useState<"light" | "dark">("light");
+    const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
 
     useEffect(() => {
         const savedTheme = localStorage.getItem("theme");
@@ -20,7 +21,7 @@ export default function BlogsIndex() {
         }
 
         const fadeElements = document.querySelectorAll(".fade-in-up");
-        const observerOptions = { root: null, rootMargin: "0px 0px -50px 0px", threshold: 0.1 };
+        const observerOptions = { root: null, rootMargin: "0px 0px -50px 0px", threshold: 0 };
         const sectionObserver = new IntersectionObserver((entries, observer) => {
             entries.forEach((entry) => {
                 if (entry.isIntersecting) {
@@ -71,9 +72,32 @@ export default function BlogsIndex() {
                         >
                             <i className={theme === "dark" ? "ri-sun-line" : "ri-moon-line"} id="themeIcon"></i>
                         </button>
+                        {/* Mobile Menu Toggle Button */}
+                        <button
+                            className="icon-btn mobile-menu-btn"
+                            aria-label="Toggle Mobile Menu"
+                            onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
+                        >
+                            <i className={isMobileMenuOpen ? "ri-close-line" : "ri-menu-line"}></i>
+                        </button>
                     </div>
                 </div>
             </nav>
+
+            {/* Mobile Navigation Menu Dropdown */}
+            {isMobileMenuOpen && (
+                <div className="mobile-nav-dropdown fade-in-up visible">
+                    <Link href="/#experience" onClick={() => setIsMobileMenuOpen(false)}>
+                        Experience
+                    </Link>
+                    <Link href="/projects" onClick={() => setIsMobileMenuOpen(false)}>
+                        Projects
+                    </Link>
+                    <Link href="/blogs" onClick={() => setIsMobileMenuOpen(false)}>
+                        Blogs
+                    </Link>
+                </div>
+            )}
 
             <main className="page-wrapper" style={{ paddingTop: "2rem" }}>
                 <section
