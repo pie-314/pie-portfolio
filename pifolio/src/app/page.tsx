@@ -115,8 +115,8 @@ export default function Portfolio() {
           </div>
           <div className="nav-links hidden-mobile">
             <Link href="#experience">Experience</Link>
-            <Link href="/projects">Projects</Link>
-            <Link href="/blogs">Blogs</Link>
+            <Link href="#projects">Projects</Link>
+            <Link href="#writing">Blogs</Link>
           </div>
           <div className="nav-actions">
             <div
@@ -162,10 +162,10 @@ export default function Portfolio() {
           <Link href="#experience" onClick={() => setIsMobileMenuOpen(false)}>
             Experience
           </Link>
-          <Link href="/projects" onClick={() => setIsMobileMenuOpen(false)}>
+          <Link href="#projects" onClick={() => setIsMobileMenuOpen(false)}>
             Projects
           </Link>
-          <Link href="/blogs" onClick={() => setIsMobileMenuOpen(false)}>
+          <Link href="#writing" onClick={() => setIsMobileMenuOpen(false)}>
             Blogs
           </Link>
         </div>
@@ -499,6 +499,12 @@ export default function Portfolio() {
                 </div>
               </article>
             </div>
+
+            <div style={{ display: "flex", justifyContent: "center", marginTop: "3rem" }}>
+              <Link href="/projects" className="project-link" style={{ padding: "0.8rem 1.5rem", fontSize: "1rem" }}>
+                View All Projects <i className="ri-arrow-right-line"></i>
+              </Link>
+            </div>
           </section>
 
           <div className="section-divider"></div>
@@ -566,6 +572,12 @@ export default function Portfolio() {
                 models for anyone to understand.
               </p>
             </a>
+          </div>
+
+          <div style={{ display: "flex", justifyContent: "center", marginTop: "3rem" }}>
+            <Link href="/blogs" className="project-link" style={{ padding: "0.8rem 1.5rem", fontSize: "1rem" }}>
+              View All Blogs <i className="ri-arrow-right-line"></i>
+            </Link>
           </div>
         </section>
 

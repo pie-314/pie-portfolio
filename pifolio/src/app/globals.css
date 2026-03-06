@@ -70,6 +70,10 @@
   box-sizing: border-box;
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
 body.pro-theme {
   background-color: var(--bg-page);
   color: var(--text-main);
