@@ -3,24 +3,51 @@ import type { Metadata } from "next";
 import "./globals.css";
 
 export const metadata: Metadata = {
-  title: "Aadarsh Chandra | Developer & Builder",
-  description: "Aadarsh Chandra - Full-stack web, Python/Rust backend, and core systems developer. Self-employed since 18.",
-  keywords: ["Aadarsh Chandra", "Pi", "Developer", "Software Engineer", "Rust", "Python", "C", "Full-stack", "Backend", "Portfolio", "Engineer"],
+  title: "Aadarsh Chandra (Pi) | Software Developer & Builder",
+  description: "Portfolio of Aadarsh Chandra (Pi) - an 18-year-old self-employed developer specializing in full-stack web, Python/Rust backend, and core systems development (C, Kernel).",
+  keywords: ["Aadarsh Chandra", "Aadarsh", "Chandra", "Pi", "pie-314", "pidev", "pidev.tech", "Software Developer", "Software Engineer", "Rust", "Python", "C", "Full-stack", "Backend", "Portfolio", "Systems Engineer", "Machine Learning"],
   authors: [{ name: "Aadarsh Chandra", url: "https://pidev.tech" }],
   creator: "Aadarsh Chandra",
+  publisher: "Aadarsh Chandra",
+  alternates: {
+    canonical: "https://pidev.tech",
+    languages: {
+      "en-US": "https://pidev.tech",
+    },
+  },
   openGraph: {
-    title: "Aadarsh Chandra | Developer & Builder",
-    description: "Aadarsh Chandra - Full-stack web, Python/Rust backend, and core systems developer. Self-employed since 18.",
+    title: "Aadarsh Chandra (Pi) | Software Developer & Builder",
+    description: "Portfolio of Aadarsh Chandra (Pi) - an 18-year-old self-employed developer specializing in full-stack web, Python/Rust backend, and core systems development.",
     url: "https://pidev.tech",
-    siteName: "Aadarsh Chandra's Portfolio",
+    siteName: "Aadarsh Chandra",
+    images: [
+      {
+        url: "/icon.png",
+        width: 800,
+        height: 600,
+        alt: "Aadarsh Chandra Portfolio Logo",
+      },
+    ],
     locale: "en_US",
     type: "website",
   },
   twitter: {
     card: "summary_large_image",
-    title: "Aadarsh Chandra | Developer & Builder",
-    description: "Aadarsh Chandra - Full-stack web, Python/Rust backend, and core systems developer.",
+    title: "Aadarsh Chandra (Pi) | Software Developer & Builder",
+    description: "Portfolio of Aadarsh Chandra (Pi) - an 18-year-old self-employed developer specializing in full-stack web, Python/Rust backend, and core systems development.",
     creator: "@pie314n",
+    images: ["/icon.png"],
+  },
+  robots: {
+    index: true,
+    follow: true,
+    googleBot: {
+      index: true,
+      follow: true,
+      "max-video-preview": -1,
+      "max-image-preview": "large",
+      "max-snippet": -1,
+    },
   },
   metadataBase: new URL("https://pidev.tech"),
 };

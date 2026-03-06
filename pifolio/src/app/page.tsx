@@ -7,7 +7,6 @@ import SearchModal from "../components/SearchModal";
 export default function Portfolio() {
   const [theme, setTheme] = useState<"light" | "dark">("light");
   const [isSearchOpen, setIsSearchOpen] = useState(false);
-  const [copied, setCopied] = useState(false);
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
 
   useEffect(() => {
@@ -199,30 +198,7 @@ export default function Portfolio() {
             </h1>
             <h2 className="hero-subtitle">Software Developer / Builder</h2>
 
-            <div className="terminal-install">
-              <div
-                className="terminal-install-cmd-container tooltip tooltip-bottom"
-                data-tooltip={copied ? "Copied!" : "Click to copy"}
-                onClick={() => {
-                  navigator.clipboard.writeText(
-                    "curl -fsSL https://pidev.tech/install | sh",
-                  );
-                  setCopied(true);
-                  setTimeout(() => setCopied(false), 2000);
-                }}
-              >
-                <code className="terminal-install-cmd">
-                  curl -fsSL https://pidev.tech/install | sh
-                </code>
-                <i
-                  className={
-                    copied
-                      ? "ri-check-line text-green-500"
-                      : "ri-file-copy-line"
-                  }
-                ></i>
-              </div>
-            </div>
+
 
             <p className="hero-bio">
               Hey! I&apos;m an 18-year-old self-employed developer. While I love
