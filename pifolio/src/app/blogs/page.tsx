@@ -116,6 +116,17 @@ export default function BlogsIndex() {
 
                     <div className="blogs-list">
                         <Link
+                            href="/blog/i-use-arch-and-no-i-dont-live-in-a-cave"
+                            className="blog-item"
+                        >
+                            <div className="blog-meta">Mar 2026 • Linux / Setup</div>
+                            <h3 className="blog-title">I Use Arch, and No, I Don't Live in a Cave</h3>
+                            <p className="blog-excerpt">
+                                Misconceptions of Arch Linux and why it's a great tool for developers who want a clean experience.
+                            </p>
+                        </Link>
+
+                        <Link
                             href="/blog/building-a-neural-network-from-scratch-in-c"
                             className="blog-item"
                         >

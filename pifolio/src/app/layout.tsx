@@ -5,7 +5,7 @@ import "./globals.css";
 export const metadata: Metadata = {
   title: "Aadarsh Chandra (Pi) | Software Developer & Builder",
   description: "Portfolio of Aadarsh Chandra (Pi) - an 18-year-old self-employed developer specializing in full-stack web, Python/Rust backend, and core systems development (C, Kernel).",
-  keywords: ["Aadarsh Chandra", "Aadarsh", "Chandra", "Pi", "pie-314", "pidev", "pidev.tech", "Software Developer", "Software Engineer", "Rust", "Python", "C", "Full-stack", "Backend", "Portfolio", "Systems Engineer", "Machine Learning"],
+  keywords: ["Aadarsh Chandra", "Aadarsh", "Chandra", "Pi", "pie-314", "pidev", "pidev.tech", "Software Developer", "Software Engineer", "Rust", "Python", "C", "Full-stack", "Backend", "Portfolio", "Systems Engineer", "Machine Learning", "Adarsh", "adarsh chandra", "aadarsh developer", "pi developer"],
   authors: [{ name: "Aadarsh Chandra", url: "https://pidev.tech" }],
   creator: "Aadarsh Chandra",
   publisher: "Aadarsh Chandra",

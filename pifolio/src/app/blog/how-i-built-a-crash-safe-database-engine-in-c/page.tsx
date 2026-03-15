@@ -861,6 +861,41 @@ export default function BlogPost() {
                 <p style={{ marginBottom: "2.5rem" }}>
                   And that understanding was the real goal.
                 </p>
+
+                {/* ABOUT THE AUTHOR */}
+                <div style={{
+                  marginTop: "4rem",
+                  padding: "2rem",
+                  background: "var(--bg-surface)",
+                  borderRadius: "12px",
+                  border: "1px solid var(--border-light)",
+                  display: "flex",
+                  gap: "1.5rem",
+                  alignItems: "center",
+                  flexWrap: "wrap"
+                }}>
+                  <img
+                    src={theme === "dark" ? "/black_bg_pi.png" : "/white_bg_pi.png"}
+                    alt="Aadarsh Chandra"
+                    style={{
+                      width: "80px",
+                      height: "80px",
+                      borderRadius: "50%",
+                      objectFit: "cover",
+                      border: "2px solid var(--border-light)"
+                    }}
+                  />
+                  <div>
+                    <h3 style={{ fontSize: "1.2rem", marginBottom: "0.5rem", color: "var(--text-strong)" }}>
+                      Aadarsh Chandra (Pi)
+                    </h3>
+                    <p style={{ fontSize: "0.95rem", color: "var(--text-main)", lineHeight: "1.6", margin: 0 }}>
+                      I am an 18-year-old self-employed developer building full-stack web applications,
+                      Python/Rust backends, and low-level systems. I learn by building things from first principles.
+                    </p>
+                  </div>
+                </div>
+
               </div>
             </article>
           </div>

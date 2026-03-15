@@ -444,36 +444,7 @@ export default function Portfolio() {
                 </div>
               </article>
 
-              {/* TRX */}
-              <article className="project-card">
-                <div className="project-visual bg-gradient-blue">
-                  <div className="project-mockup">
-                    <i className="devicon-rust-original mockup-icon"></i>
-                    <span className="mockup-text text-mono">0x7B2</span>
-                  </div>
-                </div>
-                <div className="project-info">
-                  <div className="project-status">
-                    <span
-                      className="status-dot dot-live tooltip"
-                      data-tooltip="TUI Active"
-                    ></span>{" "}
-                    TRX Package Manager
-                  </div>
-                  <p className="project-description">
-                    A blazing fast, terminal-native package manager utilizing
-                    Ratatui to deliver a beautiful, modern workflow CLI.
-                  </p>
-                  <a
-                    href="https://github.com/pie-314/trx"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="project-link"
-                  >
-                    View Project <i className="ri-arrow-right-up-line"></i>
-                  </a>
-                </div>
-              </article>
+
             </div>
 
             <div style={{ display: "flex", justifyContent: "center", marginTop: "3rem" }}>
@@ -509,6 +480,19 @@ export default function Portfolio() {
 
           <div className="blogs-list">
             <Link
+              href="/blog/i-use-arch-and-no-i-dont-live-in-a-cave"
+              className="blog-item"
+            >
+              <div className="blog-meta">Mar 2026 • Linux / Setup</div>
+              <h3 className="blog-title">
+                I Use Arch, and No, I Don't Live in a Cave
+              </h3>
+              <p className="blog-excerpt">
+                Misconceptions of Arch Linux and why it's a great tool for developers who want a clean experience.
+              </p>
+            </Link>
+
+            <Link
               href="/blog/building-a-neural-network-from-scratch-in-c"
               className="blog-item"
             >
@@ -535,19 +519,7 @@ export default function Portfolio() {
               </p>
             </Link>
 
-            <a
-              href="https://physicsforkidss.blogspot.com/2024/10/general-relativity-for-kids-to.html"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="blog-item"
-            >
-              <div className="blog-meta">Oct 2024 • Mental Models</div>
-              <h3 className="blog-title">General Relativity for Kids</h3>
-              <p className="blog-excerpt">
-                Distilling complex physics concepts into accessible mental
-                models for anyone to understand.
-              </p>
-            </a>
+
           </div>
 
           <div style={{ display: "flex", justifyContent: "center", marginTop: "3rem" }}>
